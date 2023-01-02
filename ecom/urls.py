@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.views.generic import RedirectView
+from django.contrib.staticfiles.storage import staticfiles_storage
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('logout/', RedirectView.as_view(url='/admin/logout/')),
     path('', include("coapp.urls")),
-]
+     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('favicon/favicon.ico')))
+] 
+# if settings.DEBUG:
