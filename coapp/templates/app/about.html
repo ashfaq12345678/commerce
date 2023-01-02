@@ -1,0 +1,50 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}About{% endblock title %}
+
+{% block banner-slider %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app1/images/banner/b1.jpg' %}" height="400" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'app1/images/banner/b2.jpg' %}" height="400" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'app1/images/banner/b3.jpg' %}" height="400" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'app1/images/banner/b4.jpg' %}" height="400" class="d-block w-100" alt="banner image">
+      </div>
+
+      {% comment %} <div class="carousel-item">
+        <img src="" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+      </div> {% endcomment %}
+    </div>
+   </div>
+{% endblock banner-slider %}
+{% block main-content %}
+<div class="container mt-3">
+   <br>
+   <h2 class="text-center"> About us </h2>
+   <br>
+   <div class="row container">
+      <p class="fs-4 text-center">
+        This is a public limited company having its registered and corporate office at Pattambi , This is one of the fastest growing public listed companies in Kerala, This company produces a huge amounts of diary products </p>
+    </div> 
+    <br><br>
+    <h2 class="text-center">Mission</h2>
+    <br>
+    <div class="row container">
+    
+          <p class="fs-4 text-center"> To embrace the right technology to delight our customers . To anticipate, understand and respond to our customer's needs by creating high quality products and making them available through innovative and convenient channels
+          </p>
+    </div>    
+
+</div>
+<br> <br>
+{% endblock main-content %}
